@@ -61,5 +61,5 @@ jobs:
     
     - name: Dump steps context
       env:
-       STEPS_CONTEXT: ${{ toJson(steps.upload2) }}
+       STEPS_CONTEXT: ${{ toJson(steps.upload2.outputs) }}
       run: echo "$STEPS_CONTEXT"
