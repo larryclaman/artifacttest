@@ -49,6 +49,7 @@ jobs:
         
     - name: upload2
       uses: actions/upload-artifact@v2-preview
+      id: upload2
       with:
        name: docs1
        path: output
