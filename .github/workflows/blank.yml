@@ -53,6 +53,7 @@ jobs:
        name: docs1
        path: output
     
-    - name: show outputs
-      run: |
-          echo ${{ toJson(steps.upload2.outputs) }}
+      - name: Dump steps context
+        env:
+          STEPS_CONTEXT: ${{ toJson(steps) }}
+        run: echo "$STEPS_CONTEXT"
