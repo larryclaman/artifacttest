@@ -46,4 +46,13 @@ jobs:
         name: docs
     # Directory containing files to upload
         path: output
+        
+    - name: upload2
+      uses: actions/upload-artifact@v2-preview
+      with:
+       name: docs1
+       path: output
     
+    - name: show outputs
+      run: |
+          echo ${{ toJson(steps.upload2.outputs) }}
